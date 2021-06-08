@@ -15,6 +15,16 @@ public class Serialization {
             return name;
         }
 
+        private  void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
+            in.defaultReadObject();
+//            boolean x = in.readBoolean();
+        }
+
+        private  void writeObject(ObjectOutputStream out) throws IOException {
+            out.defaultWriteObject();
+//            out.writeBoolean(true);
+        }
+
         @Override
         public String toString() {
             return "Person {" +
